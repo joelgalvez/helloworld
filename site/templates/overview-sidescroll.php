@@ -5,7 +5,7 @@
 	?>
 	<div class="overview <?=$page->template->name?>">
 		<?foreach($page->children('inoverview=1') as $project):?>
-			<a href="<?=$project->url?>:''" class="item size-<?=$project->size?>">
+			<a href="<?=$project->url?>" class="item size-<?=$project->size?>">
 				<?if(count($thumb = $project->images)>0):?>
 					<?
 						$thumb = $project->images->first()->size($size_per_image,$height,array('upscaling'=>true, 'cropping'=>false));
