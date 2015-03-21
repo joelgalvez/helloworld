@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<?/*?><link rel="stylesheet" type="text/css" href="<?=AIOM::CSS('css/main.less')?>"><?*/?>
+	<link rel="stylesheet" type="text/css" href="<?=AIOM::CSS('styles/main.less')?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>css/main.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>css/main.css"> -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="<?=$config->urls->templates?>js/main.js"></script>
 </head>
