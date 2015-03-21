@@ -1,0 +1,15 @@
+site/assets/*
+site/modules/*
+site/templates/node_modules/*
+wire/*
+*.jpg
+*.jpeg
+*.png
+*.svg
+*.txt
+site/templates/css/*
+index.php
+README.md
+.htaccess
+site/config.php
+site/templates/admin.php
