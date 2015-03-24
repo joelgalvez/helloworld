@@ -1,5 +1,5 @@
 <?include_once('head.php');?>
-	<?foreach($page->children as $child):?>
+	<?foreach($page->children('inoverview=1') as $child):?>
 		<div class="block">
 			<?if($child->template->name=='article'):?>
 				<div class="page <?=$child->template->name?>">
