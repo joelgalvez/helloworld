@@ -1,4 +1,4 @@
-<?if((!$page->parent instanceof NullPage) && $page->parent->template!='blocks'):?>
+<?if(!$page->contentonly):?>
 	</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?if(((!$page->parent instanceof NullPage) && $page->parent->template!='blocks') || ($page->parent instanceof NullPage)):?>
+<?if(!$page->contentonly):?>
 	<!DOCTYPE html>
 	<html lang="en">
 	<head>
