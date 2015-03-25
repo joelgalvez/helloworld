@@ -13,5 +13,3 @@ README.md
 .htaccess
 site/config.php
 site/templates/admin.php
-settings.less
-includes.php
