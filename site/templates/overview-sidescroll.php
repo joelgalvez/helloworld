@@ -12,7 +12,7 @@
 					?>				
 					<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
  					<div class="caption">
-						<h2><?=$project->title?></h2>
+						<h4><?=$project->title?></h4>
 					</div>
  				<?endif?>
 			</a>
