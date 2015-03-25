@@ -4,10 +4,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<?include('includes.php');?>
+		<?=$pages->get('/settings')->includes?>
 		<link rel="stylesheet" type="text/css" href="<?=AIOM::CSS('styles/main.less')?>">
+		<style><?=$pages->get('/settings')->css?></style>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>css/main.css"> -->
+		
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="<?=$config->urls->templates?>js/main.js"></script>
