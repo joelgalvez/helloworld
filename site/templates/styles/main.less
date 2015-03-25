@@ -4,6 +4,9 @@
 @mobile:   ~"all and (max-width: 900px)";
 @desktop:   ~"all and (min-width: 901px)";
 
+@main-margin: 1rem;
+@block-margin: @main-margin*3;
+
 * {
 	box-sizing: border-box;
 }
@@ -102,13 +105,11 @@ img {
 
 
 .container {
-	max-width: 1400px;
 	margin:0 auto;
 	margin-bottom: 100px;
 	// padding:@main-margin;
 	.menu {
 		margin:@main-margin;
-		margin-top: 0;
 		margin-bottom: @block-margin;
 		text-align: center;
 		.menu-item {
@@ -157,8 +158,9 @@ img {
 
 	}
 	.overview-same-size {
+		margin-left: @main-margin;
 		@media @desktop {
-			margin-right: -@main-margin;
+			
 		}
 		a.item {
 			display: inline-block;
@@ -184,7 +186,8 @@ img {
 		}
 		@media @desktop {
 			// position: absolute;
-			height: 600px;
+			height: 700px;
+			width: 100%;
 			top:0;
 			left:0;
 			z-index: -1;
