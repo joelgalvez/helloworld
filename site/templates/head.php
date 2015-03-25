@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<?include('includes.php')?>
+		<?include('includes.php');?>
 		<link rel="stylesheet" type="text/css" href="<?=AIOM::CSS('styles/main.less')?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>css/main.css"> -->
