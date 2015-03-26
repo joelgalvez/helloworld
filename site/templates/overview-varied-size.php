@@ -12,8 +12,8 @@
 						if($size=='') {
 							$size = 2;
 						}
-
-						$thumb = $project->images->first()->size($factor*$size,$factor*$size,array('upscaling'=>false, 'cropping'=>false));
+						$height = $factor*$size;
+						$thumb = $project->images->first()->size($factor*$size,$height,array('upscaling'=>false, 'cropping'=>false));
 					?>				
 					<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
 					<div class="caption">
