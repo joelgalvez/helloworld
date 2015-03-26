@@ -1,5 +1,6 @@
 site/assets/*
 site/modules/*
+!site/modules/TextformatterImageTags
 site/templates/node_modules/*
 wire/*
 *.jpg
@@ -13,4 +14,3 @@ README.md
 .htaccess
 site/config.php
 site/templates/admin.php
-!TextformatterImageTags.module
