@@ -230,42 +230,30 @@ img {
 .container .article.page a {
   text-decoration: underline;
 }
-.container .article.page .leadtext .readmore,
-.container .article.page .body .readmore,
-.container .article.page .leadtext blockquote,
-.container .article.page .body blockquote,
-.container .article.page .leadtext h1,
-.container .article.page .body h1,
-.container .article.page .leadtext h2,
-.container .article.page .body h2,
-.container .article.page .leadtext h3,
-.container .article.page .body h3,
-.container .article.page .leadtext h4,
-.container .article.page .body h4,
-.container .article.page .leadtext p,
-.container .article.page .body p,
-.container .article.page .leadtext ul,
-.container .article.page .body ul {
+.container .article.page .content blockquote,
+.container .article.page .content h1,
+.container .article.page .content h2,
+.container .article.page .content h3,
+.container .article.page .content h4,
+.container .article.page .content p,
+.container .article.page .content ul {
   max-width: 670px;
   margin: 0 auto;
   margin-bottom: 1rem;
   padding: 0 1rem;
 }
-.container .article.page .leadtext h1,
-.container .article.page .body h1 {
+.container .article.page .content h1 {
   margin-top: 3rem;
   margin-bottom: 2rem;
   -webkit-transform: rotate(-15deg);
       -ms-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
-.container .article.page .leadtext h2,
-.container .article.page .body h2 {
+.container .article.page .content h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-.container .article.page .leadtext .TextformatterVideoEmbed,
-.container .article.page .body .TextformatterVideoEmbed {
+.container .article.page .content .TextformatterVideoEmbed {
   max-width: 900px;
   margin: 1rem auto;
 }
