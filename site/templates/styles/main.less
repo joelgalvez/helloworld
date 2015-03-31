@@ -129,28 +129,29 @@ img {
 			text-decoration: underline;
 		}
 
-		.leadtext,
-		.body {
 			.readmore,
-			blockquote,
-			h1,h2,h3,h4,
-			p,
-			ul {
+			.body blockquote,
+			.body h1,
+			.body h2,
+			.body h3,
+			.body h4,
+			.body p,
+			.body ul {
 				max-width: 670px;
 				margin:0 auto;
 				margin-bottom: 1rem;
 				padding:0 1rem;
 			}
-			h1 {
+			.body h1 {
 				margin-top:@main-margin*3;
 				margin-bottom:@main-margin*2;
 				transform: rotate(-15deg);
 			}
-			h2 {
+			.body h2 {
 				margin-top:@main-margin*3;
 				margin-bottom:@main-margin*1;
 			}
-			.TextformatterVideoEmbed {
+			.body .TextformatterVideoEmbed {
 				max-width: 900px;
 				margin:@main-margin auto;
 			}
