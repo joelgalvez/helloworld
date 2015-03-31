@@ -5,7 +5,8 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<?=$pages->get('/settings')->includes?>
-		<link rel="stylesheet" type="text/css" href="<?=AIOM::CSS('styles/main.less')?>">
+		<?/*?><link rel="stylesheet" type="text/css" href="<?=AIOM::CSS('styles/main.less')?>"><?*/?>
+		<link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>css/main.css">
 		<style><?=$pages->get('/settings')->css?></style>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
