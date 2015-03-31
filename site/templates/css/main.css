@@ -395,7 +395,7 @@ img {
           user-select: none;
   list-style: none;
   padding-left: 1rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem auto;
 }
 .container .article.page.faq input {
   display: none;
