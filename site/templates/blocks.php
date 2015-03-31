@@ -6,12 +6,15 @@
 		<div class="block">
 			<?if($child->template->name=='article'):?>
 				<div class="page <?=$child->template->name?>">
-					<div class="leadtext content"><?=$child->leadtext?></div>
-					<?if($child->getUnformatted('body')):?>
-						<div class="readmore">
-							<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
-						</div>
-					<?endif?>
+					<div class="leadtext content">
+						<?=$child->leadtext?>
+						<?if($child->getUnformatted('body')):?>
+							<div class="readmore">
+								<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
+							</div>
+						<?endif?>
+					</div>
+					
 				</div>
 			<?else:?>
 				<?=$child->render()?>

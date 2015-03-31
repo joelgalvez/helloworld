@@ -230,6 +230,7 @@ img {
 .container .article.page a {
   text-decoration: underline;
 }
+.container .article.page .content .readmore,
 .container .article.page .content blockquote,
 .container .article.page .content h1,
 .container .article.page .content h2,
