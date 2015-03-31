@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -248,8 +247,8 @@ img {
   margin-top: 3rem;
   margin-bottom: 2rem;
   -webkit-transform: rotate(-15deg);
-  -ms-transform: rotate(-15deg);
-  transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+          transform: rotate(-15deg);
 }
 .container .article.page h2 {
   margin-top: 3rem;
@@ -312,17 +311,17 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-line-pack: distribute;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
             align-content: space-around;
     -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     margin-right: 1rem;
   }
   .container .overview-varied-size a.item {
@@ -330,88 +329,104 @@ img {
     text-align: center;
     margin-left: 1rem;
     margin-bottom: 2rem;
-    -ms-flex-item-align: center;
     -webkit-align-self: center;
+        -ms-flex-item-align: center;
             align-self: center;
   }
   .container .overview-varied-size a.item.size-1 {
-    -ms-flex-preferred-size: 10%;
     -webkit-flex-basis: 10%;
+        -ms-flex-preferred-size: 10%;
             flex-basis: 10%;
   }
   .container .overview-varied-size a.item.size-2 {
-    -ms-flex-preferred-size: 20%;
     -webkit-flex-basis: 20%;
+        -ms-flex-preferred-size: 20%;
             flex-basis: 20%;
   }
   .container .overview-varied-size a.item.size-3 {
-    -ms-flex-preferred-size: 30%;
     -webkit-flex-basis: 30%;
+        -ms-flex-preferred-size: 30%;
             flex-basis: 30%;
   }
   .container .overview-varied-size a.item.size-4 {
-    -ms-flex-preferred-size: 40%;
     -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
             flex-basis: 40%;
   }
   .container .overview-varied-size a.item.size-5 {
-    -ms-flex-preferred-size: 50%;
     -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
             flex-basis: 50%;
   }
   .container .overview-varied-size a.item.size-6 {
-    -ms-flex-preferred-size: 60%;
     -webkit-flex-basis: 60%;
+        -ms-flex-preferred-size: 60%;
             flex-basis: 60%;
   }
   .container .overview-varied-size a.item.size-7 {
-    -ms-flex-preferred-size: 70%;
     -webkit-flex-basis: 70%;
+        -ms-flex-preferred-size: 70%;
             flex-basis: 70%;
   }
   .container .overview-varied-size a.item.size-8 {
-    -ms-flex-preferred-size: 80%;
     -webkit-flex-basis: 80%;
+        -ms-flex-preferred-size: 80%;
             flex-basis: 80%;
   }
   .container .overview-varied-size a.item.size-9 {
-    -ms-flex-preferred-size: 90%;
     -webkit-flex-basis: 90%;
+        -ms-flex-preferred-size: 90%;
             flex-basis: 90%;
   }
   .container .overview-varied-size a.item.size-10 {
-    -ms-flex-preferred-size: 100%;
     -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
   }
 }
-.container .faq ul {
+.container .article.page.faq h3,
+.container .article.page.faq p {
+  margin: 0;
+}
+.container .article.page.faq ul {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  pointer-events: none;
   list-style: none;
   padding-left: 1rem;
+  margin-bottom: 1rem;
 }
-.container .faq input {
+.container .article.page.faq label,
+.container .article.page.faq .leadtext {
+  color: red;
+}
+.container .article.page.faq label:hover,
+.container .article.page.faq .leadtext:hover {
+  color: red;
+}
+.container .article.page.faq input {
   display: none;
 }
-.container .faq input:checked ~ ul,
-.container .faq input:checked ~ .body {
+.container .article.page.faq input:checked ~ ul,
+.container .article.page.faq input:checked ~ .body {
   display: none;
 }
-.container .faq input ~ label {
+.container .article.page.faq input ~ label {
   cursor: pointer;
-  pointer-events: all;
 }
-.container .faq input ~ label:before {
+.container .article.page.faq input:checked ~ label,
+.container .article.page.faq input:checked ~ .body,
+.container .article.page.faq input:checked ~ .leadtext {
+  color: black;
+}
+.container .article.page.faq input ~ label:before {
   content: '-';
   width: 1rem;
   height: 1rem;
   position: absolute;
   margin-left: -1rem;
 }
-.container .faq input:checked ~ label:before {
+.container .article.page.faq input:checked ~ label:before {
   content: '+';
 }

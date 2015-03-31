@@ -1,6 +1,6 @@
 <?include('head.php');?>
 	
-	<div class="<?=$page->template->name?>">
+	<div class="article page <?=$page->template->name?>">
 		<?
 			echo tree($page);
 		?>
