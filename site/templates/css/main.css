@@ -397,14 +397,6 @@ img {
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
-.container .article.page.faq label,
-.container .article.page.faq .leadtext {
-  color: red;
-}
-.container .article.page.faq label:hover,
-.container .article.page.faq .leadtext:hover {
-  color: red;
-}
 .container .article.page.faq input {
   display: none;
 }
@@ -414,11 +406,6 @@ img {
 }
 .container .article.page.faq input ~ label {
   cursor: pointer;
-}
-.container .article.page.faq input:checked ~ label,
-.container .article.page.faq input:checked ~ .body,
-.container .article.page.faq input:checked ~ .leadtext {
-  color: black;
 }
 .container .article.page.faq input ~ label:before {
   content: '-';
