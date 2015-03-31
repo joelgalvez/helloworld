@@ -8,7 +8,6 @@ wire/*
 *.png
 *.svg
 *.txt
-site/templates/css/*
 index.php
 README.md
 .htaccess
