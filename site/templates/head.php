@@ -47,3 +47,28 @@
 
 			</div>
 <?endif?>
+
+<?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_leadtext=false) {?>
+	<?
+		$has_content = $i->getUnformatted('body')!='';
+	?>
+	<a <?=$has_content?"href=\"{$i->url}\"":""?> class="item size-<?=$i->size?>">
+		
+		<?if(count($thumb = $i->images)>0):?>
+			<figure>
+				<?
+					$thumb = $i->images->first()->size($width,$height,array('upscaling'=>$upscaling, 'cropping'=>$cropping));
+				?>				
+				<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
+				<figcaption>
+					<?=$i->title?>
+					<?if($show_leadtext):?>
+						<div class="leadtext">
+							<?=$project->leadtext?>
+						</div>
+					<?endif?>
+				</figcaption>
+			</figure>
+		<?endif?>
+	</a>
+<?}?>

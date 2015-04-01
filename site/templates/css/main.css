@@ -152,25 +152,12 @@ code {
   font-size: 0.8rem;
   line-height: 0.8rem;
 }
-ul li {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-ul li:before {
-  content: '\2013';
-  margin-left: -1rem;
-  width: 1rem;
-  display: block;
-  float: left;
-}
 a {
   color: blue;
   text-decoration: none;
 }
-a.active,
-a:hover {
+a[href].active,
+a[href]:hover {
   color: red;
 }
 .edit {
@@ -238,6 +225,19 @@ img {
   max-width: 900px;
   margin: 1rem auto;
 }
+.content > ul > li {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.content > ul > li:before {
+  content: '\2013';
+  margin-left: -1rem;
+  width: 1rem;
+  display: block;
+  float: left;
+}
 .container {
   margin: 0 auto;
   margin-bottom: 100px;
@@ -294,6 +294,9 @@ img {
   .container .overview-sidescroll a.item {
     margin-right: 1rem;
     display: inline-block;
+    height: 100%;
+  }
+  .container .overview-sidescroll a.item figure {
     height: 100%;
   }
   .container .overview-sidescroll a.item:nth-child(1) {
