@@ -51,6 +51,9 @@
 <?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_leadtext=false) {?>
 	<?
 		$has_content = $i->getUnformatted('body')!='';
+		if(!$i->template->hasField('body')) {
+			$has_content = true;
+		}
 	?>
 	<a <?=$has_content?"href=\"{$i->url}\"":""?> class="item size-<?=$i->size?>">
 		

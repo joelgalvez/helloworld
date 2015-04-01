@@ -177,6 +177,7 @@ a[href]:hover {
 }
 figcaption {
   margin: 0.25rem;
+  min-height: 3rem;
 }
 img {
   vertical-align: bottom;
