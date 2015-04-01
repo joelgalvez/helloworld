@@ -462,6 +462,8 @@ img {
 .container .tree input:checked ~ label:before {
   content: '+';
 }
-.test .test {
-  font-size: 10rem;
+header,
+footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
