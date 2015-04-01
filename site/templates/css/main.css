@@ -210,6 +210,34 @@ img {
 .pagination ul li.MarkupPagerNavOn a {
   color: #f00;
 }
+.content > .readmore,
+.content > blockquote,
+.content > h1,
+.content > h2,
+.content > h3,
+.content > h4,
+.content > p,
+.content > ul {
+  max-width: 670px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+.content > h1 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+.content > h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.content > .TextformatterVideoEmbed {
+  max-width: 900px;
+  margin: 1rem auto;
+}
 .container {
   margin: 0 auto;
   margin-bottom: 100px;
@@ -229,34 +257,6 @@ img {
 }
 .container .article.page a {
   text-decoration: underline;
-}
-.container .article.page .content > .readmore,
-.container .article.page .content > blockquote,
-.container .article.page .content > h1,
-.container .article.page .content > h2,
-.container .article.page .content > h3,
-.container .article.page .content > h4,
-.container .article.page .content > p,
-.container .article.page .content > ul {
-  max-width: 670px;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
-.container .article.page .content > h1 {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  -webkit-transform: rotate(-15deg);
-      -ms-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-}
-.container .article.page .content > h2 {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-.container .article.page .content > .TextformatterVideoEmbed {
-  max-width: 900px;
-  margin: 1rem auto;
 }
 .container .overview-same-size {
   margin-left: 1rem;
@@ -384,7 +384,7 @@ img {
             flex-basis: 100%;
   }
 }
-.container .article.page.faq ul {
+.container .tree ul {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -393,26 +393,26 @@ img {
   padding-left: 1rem;
   margin: 0.5rem auto;
 }
-.container .article.page.faq .body {
+.container .tree .body {
   margin: 0.5rem auto;
 }
-.container .article.page.faq input {
+.container .tree input {
   display: none;
 }
-.container .article.page.faq input:checked ~ ul,
-.container .article.page.faq input:checked ~ .body {
+.container .tree input:checked ~ ul,
+.container .tree input:checked ~ .body {
   display: none;
 }
-.container .article.page.faq input ~ label {
+.container .tree input ~ label {
   cursor: pointer;
 }
-.container .article.page.faq input ~ label:before {
+.container .tree input ~ label:before {
   content: '-';
   width: 1rem;
   height: 1rem;
   position: absolute;
   margin-left: -1rem;
 }
-.container .article.page.faq input:checked ~ label:before {
+.container .tree input:checked ~ label:before {
   content: '+';
 }
