@@ -1,4 +1,4 @@
-<?include_once('head.php');?>
+<?include('head.php');?>
 	<?foreach($page->children('inoverview=1') as $child):?>
 		<?
 			$child->contentonly = 1;
@@ -21,4 +21,4 @@
 			<?endif?>
 		</div>
 	<?endforeach?>
-<?include_once('foot.php');?>
+<?include('foot.php');?>
