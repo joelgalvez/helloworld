@@ -69,6 +69,26 @@
 					<?endif?>
 				</figcaption>
 			</figure>
+			<?if(!$has_content):?>
+				<?
+					$rest_width = $thumb->width;
+					$rest_height = $thumb->height;
+				?>
+				<?foreach($i->images as $img):?>
+					<?
+						if($i->images->first()->url == $img->url) {
+							continue;
+						}
+						$thumb_rest = $img->size($rest_width, $rest_height, array('upscaling'=>true, 'cropping'=>true));
+					?>
+					<figure style="display:none">
+						<img src="<?=$thumb_rest->url?>" alt="<?=$thumb_rest->description?>">
+						<figcaption>
+							<?=$thumb_rest->description?>
+						</figcaption>
+					</figure>
+				<?endforeach?>
+			<?endif?>
 		<?endif?>
 	</a>
 <?}?>

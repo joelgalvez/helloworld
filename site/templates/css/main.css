@@ -175,6 +175,9 @@ a[href]:hover {
   text-align: center;
   margin: 2rem;
 }
+figcaption {
+  margin: 0.25rem;
+}
 img {
   vertical-align: bottom;
   max-width: 100%;
@@ -386,6 +389,13 @@ img {
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
   }
+}
+.container .overview-blog a.item {
+  display: block;
+  text-align: center;
+}
+.container .overview-blog a.item figure {
+  margin: 0 auto;
 }
 .container .tree ul {
   -webkit-user-select: none;
