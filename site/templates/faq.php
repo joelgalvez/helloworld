@@ -27,7 +27,7 @@
 					<div class="leadtext">
 						<?=$c->leadtext?>
 					</div>
-					<div class="body">
+					<div class="body content">
 						<?=$c->body?>
 					</div>
 					<?tree($c,++$level)?>
