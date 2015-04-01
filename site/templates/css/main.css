@@ -230,31 +230,31 @@ img {
 .container .article.page a {
   text-decoration: underline;
 }
-.container .article.page .content .readmore,
-.container .article.page .content blockquote,
-.container .article.page .content h1,
-.container .article.page .content h2,
-.container .article.page .content h3,
-.container .article.page .content h4,
-.container .article.page .content p,
-.container .article.page .content ul {
+.container .article.page .content > .readmore,
+.container .article.page .content > blockquote,
+.container .article.page .content > h1,
+.container .article.page .content > h2,
+.container .article.page .content > h3,
+.container .article.page .content > h4,
+.container .article.page .content > p,
+.container .article.page .content > ul {
   max-width: 670px;
   margin: 0 auto;
   margin-bottom: 1rem;
   padding: 0 1rem;
 }
-.container .article.page .content h1 {
+.container .article.page .content > h1 {
   margin-top: 3rem;
   margin-bottom: 2rem;
   -webkit-transform: rotate(-15deg);
       -ms-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
-.container .article.page .content h2 {
+.container .article.page .content > h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-.container .article.page .content .TextformatterVideoEmbed {
+.container .article.page .content > .TextformatterVideoEmbed {
   max-width: 900px;
   margin: 1rem auto;
 }

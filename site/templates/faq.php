@@ -1,9 +1,11 @@
 <?include('head.php');?>
 	
 	<div class="article page <?=$page->template->name?>">
-		<?
-			echo tree($page);
-		?>
+		<div class="content">
+			<?
+				echo tree($page);
+			?>
+		</div>
 	</div>
 <?include('foot.php');?>
 
