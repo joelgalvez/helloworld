@@ -432,3 +432,6 @@ img {
 .container .tree input:checked ~ label:before {
   content: '+';
 }
+.test .test {
+  font-size: 10rem;
+}
