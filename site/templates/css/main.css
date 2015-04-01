@@ -395,6 +395,8 @@ img {
 }
 .container .tree .body {
   margin: 0.5rem auto;
+  margin-bottom: 2rem;
+  color: red;
 }
 .container .tree input {
   display: none;

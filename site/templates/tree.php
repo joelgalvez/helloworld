@@ -27,9 +27,11 @@
 					<div class="leadtext">
 						<?=$c->leadtext?>
 					</div>
-					<div class="body content">
-						<?=$c->body?>
-					</div>
+					<?if($c->getUnformatted('body')!=''):?>
+						<div class="body content">
+							<?=$c->body?>
+						</div>
+					<?endif?>
 					<?tree($c,++$level)?>
 				</li>
 			</ul>
