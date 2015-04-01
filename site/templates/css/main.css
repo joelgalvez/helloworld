@@ -132,7 +132,12 @@ table {
 em {
   font-style: italic;
 }
-@media all and (min-width: 901px) {
+@media all and (min-width: 1151px) {
+  html {
+    font-size: 150%;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1150px) {
   html {
     font-size: 120%;
   }
@@ -201,41 +206,65 @@ img {
 .pagination ul li.MarkupPagerNavOn a {
   color: #f00;
 }
-.content > .readmore,
-.content > blockquote,
-.content > h1,
-.content > h2,
-.content > h3,
-.content > h4,
-.content > p,
-.content > ul {
-  max-width: 670px;
+.nav,
+.content .readmore,
+.content blockquote,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content p,
+.content ul {
+  max-width: 35rem;
   margin: 0 auto;
+}
+.readmore {
+  padding: 0 1rem;
+}
+.leadtext blockquote,
+.body blockquote,
+.leadtext h1,
+.body h1,
+.leadtext h2,
+.body h2,
+.leadtext h3,
+.body h3,
+.leadtext h4,
+.body h4,
+.leadtext p,
+.body p,
+.leadtext ul,
+.body ul {
   margin-bottom: 1rem;
   padding: 0 1rem;
 }
-.content > h1 {
+.leadtext h1,
+.body h1 {
   margin-top: 3rem;
   margin-bottom: 2rem;
   -webkit-transform: rotate(-15deg);
       -ms-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
-.content > h2 {
+.leadtext h2,
+.body h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-.content > .TextformatterVideoEmbed {
+.leadtext .TextformatterVideoEmbed,
+.body .TextformatterVideoEmbed {
   max-width: 900px;
   margin: 1rem auto;
 }
-.content > ul > li {
+.leadtext ul > li,
+.body ul > li {
   margin-left: 2rem;
   margin-right: 2rem;
   display: block;
   margin-bottom: 0.25rem;
 }
-.content > ul > li:before {
+.leadtext ul > li:before,
+.body ul > li:before {
   content: '\2013';
   margin-left: -1rem;
   width: 1rem;
@@ -246,11 +275,12 @@ img {
   margin: 0 auto;
   margin-bottom: 100px;
 }
-.container .menu {
-  margin: 1rem;
+.container .nav {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
-.container .menu .menu-item {
+.container .nav .nav-item {
   margin: 1rem;
 }
 .container .block {

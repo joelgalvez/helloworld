@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="menu">
+			<div class="nav content">
 				<?
 					$parents_or_self = new PageArray();
 					$parents_or_self->add($page->parents());
@@ -27,7 +27,7 @@
 					<h2>
 						<?foreach($pos->siblings() as $sibling):?>
 							<?if($sibling->inmenu):?>
-								<a class="menu-item <?=$sibling->id==$pos->id?'active':''?>" href="<?=$sibling->url?>"><?=$sibling->title?></a>
+								<a class="nav-item <?=$sibling->id==$pos->id?'active':''?>" href="<?=$sibling->url?>"><?=$sibling->title?></a>
 							<?endif?>
 						<?endforeach?>
 					</h2>
@@ -39,7 +39,7 @@
 					<h2>
 						<?foreach($subs as $c):?>
 							<?if($c->inmenu):?>
-								<a class="menu-item" href="<?=$c->url?>"><?=$c->title?></a>
+								<a class="nav-item" href="<?=$c->url?>"><?=$c->title?></a>
 							<?endif?>
 						<?endforeach?>
 					</h2>
