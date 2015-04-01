@@ -17,7 +17,7 @@
 					<?=$i->title?>
 					<?if($show_leadtext):?>
 						<div class="leadtext">
-							<?=$project->leadtext?>
+							<?=$i->leadtext?>
 						</div>
 					<?endif?>
 				</figcaption>
