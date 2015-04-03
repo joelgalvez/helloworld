@@ -238,6 +238,7 @@ img {
 .leadtext ul,
 .body ul {
   margin-bottom: 1rem;
+  padding: 0 1rem;
 }
 .leadtext h1,
 .body h1 {
@@ -274,6 +275,7 @@ img {
 }
 .container {
   margin: 0 auto;
+  padding: 1rem;
   margin-bottom: 100px;
 }
 .container .nav {
