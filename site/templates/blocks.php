@@ -4,17 +4,19 @@
 			$child->contentonly = 1;
 		?>
 		<div class="block">
-			<div class="leadtext content">
-				<?=$child->leadtext?>
+			<div class="content">
+				<div class="leadtext">
+					<?=$child->leadtext?>
+				</div>
 			</div>
 
 			<?if($child->template->name=='article'):?>
 				<div class="page <?=$child->template->name?>">
-						<?if($child->getUnformatted('body')):?>
-							<div class="readmore">
-								<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
-							</div>
-						<?endif?>
+					<?if($child->getUnformatted('body')):?>
+						<div class="readmore">
+							<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
+						</div>
+					<?endif?>
 				</div>
 					
 			<?else:?>
