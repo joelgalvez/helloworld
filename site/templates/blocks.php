@@ -8,15 +8,15 @@
 				<div class="leadtext">
 					<?=$child->leadtext?>
 				</div>
+				<?if($child->getUnformatted('body')):?>
+					<div class="readmore">
+						<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
+					</div>
+				<?endif?>
 			</div>
 
 			<?if($child->template->name=='article'):?>
 				<div class="page <?=$child->template->name?>">
-					<?if($child->getUnformatted('body')):?>
-						<div class="readmore">
-							<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
-						</div>
-					<?endif?>
 				</div>
 					
 			<?else:?>

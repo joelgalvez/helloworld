@@ -14,7 +14,7 @@
 				?>				
 				<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
 				<figcaption>
-					<!-- <?=$i->title?> -->
+					<?=$i->title?>
 					<?if($show_leadtext):?>
 						<div class="leadtext">
 							<?=$i->leadtext?>
