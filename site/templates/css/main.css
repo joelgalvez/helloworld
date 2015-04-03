@@ -166,7 +166,7 @@ a[href]:hover {
   text-decoration: underline;
 }
 .edit {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   padding: 1rem;
