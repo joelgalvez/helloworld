@@ -1,4 +1,4 @@
-<?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_leadtext=true) {?>
+<?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_leadtext=false) {?>
 	<?
 		$has_content = $i->getUnformatted('body')!='';
 		if(!$i->template->hasField('body')) {
