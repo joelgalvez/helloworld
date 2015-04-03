@@ -13,27 +13,26 @@
 	<?
 		$cnt = 1;
 	?>
-		
-		<?foreach($p->children('template=article') as $c):?>
-			<ul class="level-<?=$level?>">
-				<li>
-					<?
-						$id = 'cb-' . $level . '-' . $cnt++;
-					?>
-					<input checked type="checkbox" id="<?=$id?>">
-					<label for="<?=$id?>">
-					  <h3><?=$c->title?></h3>
-					</label>
-					<div class="leadtext">
-						<?=$c->leadtext?>
+	<?foreach($p->children('template=article') as $c):?>
+		<ul class="level-<?=$level?>">
+			<li>
+				<?
+					$id = 'cb-' . $level . '-' . $cnt++;
+				?>
+				<input checked type="checkbox" id="<?=$id?>">
+				<label for="<?=$id?>">
+				  <h3><?=$c->title?></h3>
+				</label>
+				<div class="leadtext">
+					<?=$c->leadtext?>
+				</div>
+				<?if($c->getUnformatted('body')!=''):?>
+					<div class="body content">
+						<?=$c->body?>
 					</div>
-					<?if($c->getUnformatted('body')!=''):?>
-						<div class="body content">
-							<?=$c->body?>
-						</div>
-					<?endif?>
-					<?tree($c,++$level)?>
-				</li>
-			</ul>
+				<?endif?>
+				<?tree($c,++$level)?>
+			</li>
+		</ul>
 		<?endforeach?>
 <?}?>
