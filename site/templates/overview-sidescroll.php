@@ -11,7 +11,7 @@
 					$size = 2;
 				}
 			?>
-			<?icon($c, 2000, 2000, true, false, false)?>
+			<?icon($c, 2000, 2000, true, false, true)?>
 		<?endforeach?>
 	</div>
 <?include('foot.php');?>
