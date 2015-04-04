@@ -183,12 +183,6 @@ a[href]:hover {
 .caption {
   margin: 5px;
 }
-.image,
-.video {
-  text-align: center;
-  padding: 2rem 1rem;
-  margin: 0 auto;
-}
 figcaption {
   margin: 0.25rem;
   min-height: 3rem;
@@ -230,6 +224,12 @@ img {
 }
 .content > .video {
   max-width: 50rem;
+}
+.content > .image,
+.content > .video {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 0 auto;
 }
 .readmore {
   text-decoration: underline;
