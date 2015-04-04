@@ -166,7 +166,7 @@ a[href]:hover {
   text-decoration: underline;
 }
 .edit {
-  padding: 1rem;
+  padding-right: 1rem;
   background-color: fff;
   color: #f00;
   overflow: visible;
