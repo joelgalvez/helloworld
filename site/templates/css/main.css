@@ -231,6 +231,9 @@ img {
 .content > .video {
   max-width: 50rem;
 }
+.readmore {
+  text-decoration: underline;
+}
 .leadtext blockquote,
 .body blockquote,
 .leadtext h1,
