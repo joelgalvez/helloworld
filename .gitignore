@@ -1,6 +1,7 @@
 site/assets/*
 site/modules/*
 !site/modules/TextformatterImageTags
+!site/modules/TextformatterVideoEmbed
 site/templates/node_modules/*
 wire/*
 *.jpg
