@@ -171,14 +171,8 @@ a[href]:hover {
   color: #f00;
   overflow: visible;
   height: 0;
-}
-.edit:hover .explain {
   display: block;
-}
-.edit .explain {
-  display: none;
-  font-size: 10px;
-  line-height: 1.3;
+  text-align: right;
 }
 .caption {
   margin: 5px;
