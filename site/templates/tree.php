@@ -27,7 +27,7 @@
 					<?=$c->leadtext?>
 				</div>
 				<?if($c->getUnformatted('body')!=''):?>
-					<div class="body content">
+					<div class="body">
 						<?=$c->body?>
 					</div>
 				<?endif?>

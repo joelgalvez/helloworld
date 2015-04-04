@@ -134,7 +134,7 @@ em {
 }
 @media all and (min-width: 1151px) {
   html {
-    font-size: 150%;
+    font-size: 140%;
   }
 }
 @media all and (min-width: 901px) and (max-width: 1150px) {
@@ -183,9 +183,11 @@ a[href]:hover {
 .caption {
   margin: 5px;
 }
-.image {
+.image,
+.video {
   text-align: center;
-  margin: 2rem;
+  padding: 2rem 1rem;
+  margin: 0 auto;
 }
 figcaption {
   margin: 0.25rem;
@@ -214,16 +216,20 @@ img {
   color: #f00;
 }
 .nav,
-.content .readmore,
-.content blockquote,
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content p,
-.content ul {
-  max-width: 35rem;
+.readmore,
+.content > blockquote,
+.content > h1,
+.content > h2,
+.content > h3,
+.content > h4,
+.content > p,
+.content > ul {
+  max-width: 34rem;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+.content > .video {
+  max-width: 50rem;
 }
 .leadtext blockquote,
 .body blockquote,
@@ -253,11 +259,6 @@ img {
 .body h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
-}
-.leadtext .TextformatterVideoEmbed,
-.body .TextformatterVideoEmbed {
-  max-width: 900px;
-  margin: 1rem auto;
 }
 .leadtext ul > li,
 .body ul > li {
@@ -345,6 +346,10 @@ img {
     width: auto;
   }
 }
+.container .overview-varied-size a.item {
+  display: block;
+  text-align: center;
+}
 @media all and (min-width: 901px) {
   .container .overview-varied-size {
     display: -webkit-flex;
@@ -365,8 +370,6 @@ img {
     margin-right: 1rem;
   }
   .container .overview-varied-size a.item {
-    display: block;
-    text-align: center;
     margin-left: 1rem;
     margin-bottom: 2rem;
     -webkit-align-self: center;

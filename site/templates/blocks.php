@@ -4,8 +4,8 @@
 			$child->contentonly = 1;
 		?>
 		<div class="block">
-			<div class="content">
-				<div class="leadtext">
+			
+				<div class="leadtext content">
 					<?=$child->leadtext?>
 				</div>
 				<?if($child->getUnformatted('body')):?>
@@ -13,7 +13,7 @@
 						<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
 					</div>
 				<?endif?>
-			</div>
+			
 
 			<?if($child->template->name=='article'):?>
 				<div class="page <?=$child->template->name?>">
