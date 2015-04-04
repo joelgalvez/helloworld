@@ -166,11 +166,11 @@ a[href]:hover {
   text-decoration: underline;
 }
 .edit {
-  float: right;
   padding: 1rem;
   background-color: fff;
   color: #f00;
   overflow: visible;
+  height: 0;
 }
 .edit:hover .explain {
   display: block;
