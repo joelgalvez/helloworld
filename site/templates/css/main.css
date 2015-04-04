@@ -166,15 +166,17 @@ a[href]:hover {
   text-decoration: underline;
 }
 .edit {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
   padding: 1rem;
   background-color: fff;
   color: #f00;
-  width: 5rem;
+  overflow: visible;
+}
+.edit:hover .explain {
+  display: block;
 }
 .edit .explain {
+  display: none;
   font-size: 10px;
   line-height: 1.3;
 }

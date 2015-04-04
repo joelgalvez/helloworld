@@ -51,14 +51,19 @@ a {
 }
 
 .edit {
-	position: absolute;
-	top:0;
-	right: 0;
+	float:right;
 	padding:@main-margin;
 	background-color: fff;
 	color:#f00;
-	width: 5rem;
+	// width: 0;
+	overflow: visible;
+	// margin-left: -5rem;
+	&:hover .explain {
+		display: block;
+	}
+
 	.explain {
+		display: none;
 		font-size: 10px;
 		line-height: 1.3;
 	}

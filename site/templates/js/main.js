@@ -2,6 +2,7 @@ $(function() {
     $(document.links).filter(function() {
         return this.hostname != window.location.hostname;
     }).attr('target', '_blank');
+
     $('a.item').each(function() {
     	var item = $(this);
     	var figures = $(this).find('figure');
@@ -16,8 +17,6 @@ $(function() {
     			} else {
     				visibleFigure.next().show();	
     			}
-    			
-    			
     		})
     	}
     })
