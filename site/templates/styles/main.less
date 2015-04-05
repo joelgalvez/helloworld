@@ -197,6 +197,23 @@ img {
 			text-decoration: underline;
 		}
 	}
+	.article-gallery {
+			display: flex;
+			align-items: center;
+			align-content: space-around;
+			justify-content: space-around;
+			flex-flow: row wrap;
+		
+			// margin-right:@main-margin;
+
+			figure {
+				margin-left:@main-margin;
+				margin-bottom:@main-margin*2;
+				align-self: center;
+				flex-basis: 30%;
+			}
+
+	}
 	.overview-same-size {
 		margin-left: @main-margin;
 		a.item {
