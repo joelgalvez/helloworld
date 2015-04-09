@@ -23,8 +23,8 @@
 				<label for="<?=$id?>">
 				  <h3><?=$c->title?></h3>
 				</label>
-				<div class="leadtext">
-					<?=$c->leadtext?>
+				<div class="overviewtext">
+					<?=$c->overviewtext?>
 				</div>
 				<?if($c->getUnformatted('body')!=''):?>
 					<div class="body">

@@ -1,4 +1,4 @@
-<?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_leadtext=false) {?>
+<?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_overviewtext=false) {?>
 	<?
 		$has_content = $i->getUnformatted('body')!='';
 		if(!$i->template->hasField('body')) {
@@ -17,9 +17,9 @@
 					<?if($i->title!='no-title'):?>
 						<?=$i->title?>
 					<?endif?>
-					<?if($show_leadtext):?>
-						<div class="leadtext">
-							<?=$i->leadtext?>
+					<?if($show_overviewtext):?>
+						<div class="overviewtext">
+							<?=$i->overviewtext?>
 						</div>
 					<?endif?>
 				</figcaption>

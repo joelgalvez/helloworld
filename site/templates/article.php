@@ -5,7 +5,7 @@
 
 	<div class="page <?=$page->template->name?>">
 		<!-- <h1><?=$page->title?></h1> -->
-		<!-- <div class="leadtext content"><?=$page->leadtext?></div> -->
+		<!-- <div class="overviewtext content"><?=$page->overviewtext?></div> -->
 		<div class="body content"><?=$page->body?></div>
 	</div>
 <?include('foot.php');?>

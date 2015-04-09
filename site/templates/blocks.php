@@ -5,8 +5,8 @@
 		?>
 		<div class="block">
 			
-				<div class="leadtext content">
-					<?=$child->leadtext?>
+				<div class="overviewtext content">
+					<?=$child->overviewtext?>
 				</div>
 				<?if($child->getUnformatted('body')):?>
 					<div class="readmore">
