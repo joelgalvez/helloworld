@@ -210,9 +210,11 @@ img {
 .content > h2,
 .content > h3,
 .content > h4,
+.content > h5,
+.content > h6,
 .content > p,
 .content > ul {
-  max-width: 34rem;
+  max-width: 39rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -238,6 +240,10 @@ img {
 .body h3,
 .overviewtext h4,
 .body h4,
+.overviewtext h5,
+.body h5,
+.overviewtext h6,
+.body h6,
 .overviewtext p,
 .body p,
 .overviewtext ul,
@@ -246,15 +252,12 @@ img {
 }
 .overviewtext h1,
 .body h1 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
-  -webkit-transform: rotate(-15deg);
-      -ms-transform: rotate(-15deg);
-          transform: rotate(-15deg);
 }
 .overviewtext h2,
 .body h2 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 .overviewtext ul > li,
@@ -274,6 +277,7 @@ img {
 }
 .container {
   margin: 0 auto;
+  max-width: 1000rem;
   margin-bottom: 100px;
 }
 .container .nav {
@@ -320,12 +324,15 @@ img {
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%;
 }
-.container .overview-same-size {
-  margin-left: 1rem;
+@media all and (min-width: 901px) {
+  .container .overview-same-size {
+    padding-left: 1rem;
+  }
 }
 .container .overview-same-size a.item {
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 1rem;
 }
 @media all and (min-width: 901px) {
   .container .overview-same-size a.item {
@@ -335,8 +342,7 @@ img {
 }
 @media all and (max-width: 900px) {
   .container .overview-same-size a.item {
-    max-width: 500px;
-    margin: 0 auto 1rem auto;
+    width: 100%;
   }
 }
 .container .overview-sidescroll a.item {
@@ -470,7 +476,6 @@ img {
 .container .tree .body {
   margin: 0.5rem auto;
   margin-bottom: 2rem;
-  color: red;
 }
 .container .tree input {
   display: none;

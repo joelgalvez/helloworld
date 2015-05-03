@@ -1,13 +1,14 @@
+@import "vars.less";
 @import "reset.less";
 
-@small:   ~"all and (max-width: 900px)";
-@medium:   ~"all and (min-width: 901px) and (max-width: 1150px)";
-@medium-up:   ~"all and (min-width: 901px)";
-@large:   ~"all and (min-width: 1151px)";
+// @small:   ~"all and (max-width: 900px)";
+// @medium:   ~"all and (min-width: 901px) and (max-width: 1150px)";
+// @medium-up:   ~"all and (min-width: 901px)";
+// @large:   ~"all and (min-width: 1151px)";
 
-@main-margin: 1rem;
-@block-margin: @main-margin*3;
-@content-width:34rem;
+// @main-margin: 1rem;
+// @block-margin: @main-margin*3;
+// @content-width:34rem;
 
 * {
 	box-sizing: border-box;
@@ -107,6 +108,8 @@ img {
 .content >h2,
 .content >h3,
 .content >h4,
+.content >h5,
+.content >h6,
 .content >p,
 .content >ul {
 	max-width: @content-width;
@@ -136,6 +139,8 @@ img {
 	h2,
 	h3,
 	h4,
+	h5,
+	h6,
 	p,
 	ul {
 		margin-bottom: 1rem;
@@ -143,12 +148,11 @@ img {
 	}
 
 	h1 {
-		margin-top:@main-margin*3;
+		margin-top:@main-margin*2;
 		margin-bottom:@main-margin*2;
-		transform: rotate(-15deg);
 	}
 	h2 {
-		margin-top:@main-margin*3;
+		margin-top:@main-margin*2;
 		margin-bottom:@main-margin*1;
 	}
 	.TextformatterVideoEmbed {
@@ -175,6 +179,7 @@ img {
 .container {
 	margin:0 auto;
 	// padding:@main-margin;
+	max-width: @container-width;
 	margin-bottom: 100px;
 
 	.nav {
@@ -187,7 +192,7 @@ img {
 		}
 	}
 	.block {
-		margin-bottom: 3*@main-margin;
+		margin-bottom: @block-margin;
 	}
 
 	.article.page {
@@ -215,18 +220,21 @@ img {
 
 	}
 	.overview-same-size {
-		margin-left: @main-margin;
+		@media @medium-up {
+			padding-left: @grid-margin;
+		}
 		a.item {
 			display: inline-block;
 			vertical-align: top;
+			margin-bottom: @grid-margin;
 			@media @medium-up {
-				padding-right:@main-margin;
-				
+				padding-right:@grid-margin;
+
+				// margin-left: @grid-margin;		
 				width:33.333%;	
 			}
 			@media @small {
-				max-width: 500px;
-				margin:0 auto @main-margin auto;
+				width:100%;
 			}
 		}
 		@media @small {
@@ -255,9 +263,9 @@ img {
 					height: 100%;
 				}
 				height: 100%;
-				margin-right:@main-margin;
+				margin-right:@grid-margin;
 				&:nth-child(1) {
-					margin-left:@main-margin;
+					margin-left:@grid-margin;
 				}
 				display: inline-block;
 				height: 100%;
@@ -350,7 +358,7 @@ img {
 		.body {
 			margin:0.5rem auto;
 			margin-bottom: 2rem;
-			color:red;
+			// color:red;
 		}
 		// label,
 		// .overviewtext {

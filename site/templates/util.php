@@ -6,44 +6,43 @@
 		}
 	?>
 	<a <?=$has_content?"href=\"{$i->url}\"":""?> class="item size-<?=$i->size?>">
-		
-		<?if(count($thumb = $i->images)>0):?>
-			<figure>
+		<figure>
+			<?if(count($thumb = $i->images)>0):?>
 				<?
 					$thumb = $i->images->first()->size($width,$height,array('upscaling'=>$upscaling, 'cropping'=>$cropping));
 				?>				
 				<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
-				<figcaption>
-					<?if($i->title!='no-title'):?>
-						<?=$i->title?>
-					<?endif?>
-					<?if($show_overviewtext):?>
-						<div class="overviewtext">
-							<?=$i->overviewtext?>
-						</div>
-					<?endif?>
-				</figcaption>
-			</figure>
-			<?if(!$has_content):?>
-				<?
-					$rest_width = $thumb->width;
-					$rest_height = $thumb->height;
-				?>
-				<?foreach($i->images as $img):?>
-					<?
-						if($i->images->first()->url == $img->url) {
-							continue;
-						}
-						$thumb_rest = $img->size($rest_width, $rest_height, array('upscaling'=>true, 'cropping'=>true));
-					?>
-					<figure style="display:none">
-						<img src="<?=$thumb_rest->url?>" alt="<?=$thumb_rest->description?>">
-						<figcaption>
-							<?=$thumb_rest->description?>
-						</figcaption>
-					</figure>
-				<?endforeach?>
 			<?endif?>
+			<figcaption>
+				<?if($i->title!='no-title'):?>
+					<?=$i->title?>
+				<?endif?>
+				<?if($show_overviewtext):?>
+					<div class="overviewtext">
+						<?=$i->overviewtext?>
+					</div>
+				<?endif?>
+			</figcaption>
+		</figure>
+		<?if(!$has_content):?>
+			<?
+				$rest_width = $thumb->width;
+				$rest_height = $thumb->height;
+			?>
+			<?foreach($i->images as $img):?>
+				<?
+					if($i->images->first()->url == $img->url) {
+						continue;
+					}
+					$thumb_rest = $img->size($rest_width, $rest_height, array('upscaling'=>true, 'cropping'=>true));
+				?>
+				<figure style="display:none">
+					<img src="<?=$thumb_rest->url?>" alt="<?=$thumb_rest->description?>">
+					<figcaption>
+						<?=$thumb_rest->description?>
+					</figcaption>
+				</figure>
+			<?endforeach?>
 		<?endif?>
 	</a>
 <?}?>
