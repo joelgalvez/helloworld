@@ -8,17 +8,13 @@ include('./index.php');
 up();
 
 function up() {
-	if(wire('fields')->leadtext instanceof Field) {
-		wire('fields')->leadtext->name='overviewtext';
-		wire('fields')->overviewtext->save();
-	}
+	$t = wire('templates')->get('overview-same-size');
+	$t2 = clone($t);
+	$t2->name = 'overview-list';
+	$t2->save();
 }
 
 function down() {
-	if(wire('fields')->overviewtext instanceof Field) {
-		wire('fields')->overviewtext->name='leadtext';
-		wire('fields')->leadtext->save();
-	}
 }
 
 
