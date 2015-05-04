@@ -19,12 +19,14 @@
 		<div class="container">
 			<?
 				$header = $pages->get('/header');
-				echo '<header>';
+				
 				if(!$header instanceof NullPage){
+					echo '<header>';
 					$header->contentonly=true;
 					echo $header->render();
+					echo '</header>';
 				}
-				echo '</header>';
+				
 			?>
 			<div class="nav content">
 				<?
