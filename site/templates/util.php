@@ -1,3 +1,4 @@
+<?require './scss.inc.php';?>
 <?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_overviewtext=false) {?>
 	<?
 		$has_content = $i->getUnformatted('body')!='';
