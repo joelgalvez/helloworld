@@ -1,10 +1,8 @@
 <?include('head.php');?>
-	<?
-		$counter = 1;
-	?>
 	<?foreach($page->children('inoverview=1') as $child):?>
 		<?
 			$child->contentonly = 1;			
+			$counter = 1;
 		?>
 		<div class="block">
 			
@@ -28,7 +26,7 @@
 				?>
 				<?=$child->render()?>
 				<?
-					$counter = $child->counter;
+					// $counter = $child->counter;
 				?>
 			<?endif?>
 		</div>
