@@ -47,3 +47,20 @@
 		<?endif?>
 	</a>
 <?}?>
+
+<?
+	function visit(Page $parent, $enter, $exit=null, $currentPage=null)
+	{
+	    foreach ($parent->children() as $child) {
+	        call_user_func($enter, $child, $currentPage);
+	        
+	        if ($child->numChildren > 0) {
+	            visit($child, $enter, $exit, $currentPage);
+	        }
+	        
+	        if ($exit) {
+	            call_user_func($exit, $child, $currentPage);
+	        }
+	    }
+	}
+?>

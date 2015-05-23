@@ -22,21 +22,20 @@
 		<div class="container">
 			<?
 				$header = $pages->get('/header');
-				
 				if(!$header instanceof NullPage){
 					echo '<header>';
 					$header->contentonly=true;
 					echo $header->render();
 					echo '</header>';
-				}
-				
+				}				
 			?>
+			<?/*?>
 			<?
 				$parents_or_self = new PageArray();
 				$parents_or_self->add($page->parents());
 				$parents_or_self->add($page);
 			?>
-			<div class="nav content">
+			<div class="nav expand">
 				<?foreach($parents_or_self as $pos):?>
 					<h2>
 						<?foreach($pos->siblings() as $sibling):?>
@@ -58,6 +57,53 @@
 						<?endforeach?>
 					</h2>
 				<?endif?>
+			</div>
+			<?*/?>
+			<div class="nav">
+				<div class="visible">
+					<a class="home" href="<?=$pages->get('/')->url?>">
+						<?=$pages->get('/')->title?>
+					</a>
+					<a class="expand" href="#expand">
+						<?=$pages->get('/settings/menu')->title?>
+					</a>
+				</div>
+				<ul class="expand-content">
+					<div class="close"><?=$pages->get('/settings/close')->title?></div>
+					<?
+						visit(
+						    $pages->get('/'),
+						    function(Page $p, $page) {
+						    	if($p->inmenu) {
+						    		$active = $page->id==$p->id?'active':'';
+						    		echo '<li><a class="'. $active .'" href="' . $p->url . '">' . $p->title . '</a>';
+						    	}
+					    		
+						    	
+						        if ($p->numChildren > 0) {
+						            echo '<ul>';
+						        }
+						    },
+						    function(Page $p, $page) {
+						        echo '</li>';
+						        if ($p->numChildren > 0) {
+						            echo '</ul>';
+						        }
+						    },
+						    $page
+						);
+					?>
+					<?
+						$menu_footer = $pages->get('/menu-footer');
+						if(!$menu_footer instanceof NullPage){
+							echo '<li class="menu-footer">';
+							$menu_footer->contentonly=true;
+							echo $menu_footer->body;
+							echo '</li>';
+						}				
+					?>
+
+				</ul>
 			</div>
 			
 <?endif?>

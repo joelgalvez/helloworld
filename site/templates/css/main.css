@@ -203,7 +203,6 @@ img {
 .pagination ul li.MarkupPagerNavOn a {
   color: #f00;
 }
-.nav,
 .readmore,
 .content > blockquote,
 .content > h1,
@@ -281,18 +280,40 @@ img {
   margin-bottom: 100px;
 }
 .container .nav {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  text-align: center;
+  position: relative;
+  padding: 1rem;
 }
-.container .nav .nav-item {
-  margin: 1rem;
+.container .nav .close {
+  cursor: pointer;
+}
+.container .nav.expanded .expand-content {
+  display: block;
+}
+.container .nav .expand {
+  float: right;
+}
+.container .nav .expand-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  padding: 1rem;
+  padding-top: 0;
+  background-color: #fff;
+  width: 100%;
+}
+.container .nav .expand-content .close {
+  text-align: right;
 }
 .container .block {
   margin-bottom: 3rem;
 }
 .container .article.page {
   margin: 0 auto;
+}
+.container .article.page h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 .container .article.page a {
   text-decoration: underline;
@@ -458,6 +479,8 @@ img {
   }
 }
 .container .overview-blog a.item {
+  max-width: 40rem;
+  margin: 3rem auto;
   display: block;
   text-align: center;
 }
@@ -501,4 +524,10 @@ header,
 footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.caption {
+  font-size: 0.85rem;
+}
+.menu-footer {
+  margin-top: 1rem;
 }
