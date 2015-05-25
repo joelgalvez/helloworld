@@ -61,9 +61,11 @@
 			<?*/?>
 			<div class="nav">
 				<div class="visible">
-					<a class="home" href="<?=$pages->get('/')->url?>">
-						<?=$pages->get('/')->title?>
-					</a>
+					<?if($pages->get('/')->inmenu):?>
+						<a class="home" href="<?=$pages->get('/')->url?>">
+							<?=$pages->get('/')->title?>
+						</a>
+					<?endif?>
 					<a class="expand" href="#expand">
 						<?=$pages->get('/settings/menu')->title?>
 					</a>
