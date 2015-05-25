@@ -61,14 +61,11 @@ a {
 	height: 0;
 	display: block;
 	text-align: right;
-
 }
 
 .caption {
 	margin:5px;
 }
-
-
 
 figcaption {
 	margin:0.25rem;
@@ -100,7 +97,6 @@ img {
 	}
 } 
 
-
 // .nav,
 .readmore,
 .content >blockquote,
@@ -125,7 +121,6 @@ img {
 	padding:@main-margin*2 @main-margin;
 	margin:0 auto;
 }
-
 
 .readmore {
 	text-decoration: underline;
@@ -192,6 +187,12 @@ img {
 	// 	}
 	// }
 	.nav {
+		ul ul {
+			margin-left: @main-margin;
+		}
+		ul li a {
+			display: block;
+		}
 		.close {
 			cursor: pointer;
 		}

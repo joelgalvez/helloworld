@@ -283,6 +283,12 @@ img {
   position: relative;
   padding: 1rem;
 }
+.container .nav ul ul {
+  margin-left: 1rem;
+}
+.container .nav ul li a {
+  display: block;
+}
 .container .nav .close {
   cursor: pointer;
 }
