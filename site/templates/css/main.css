@@ -522,6 +522,7 @@ img {
   height: 1rem;
   position: absolute;
   margin-left: -1rem;
+  z-index: -1;
 }
 .container .tree input:checked ~ label:before {
   content: '+';
