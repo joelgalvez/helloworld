@@ -15,4 +15,4 @@ README.md
 site/config.php
 site/templates/admin.php
 *.woff
-vars.less
+site/templates/styles/vars.less
