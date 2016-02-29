@@ -1,8 +1,11 @@
-site/assets/*
-site/modules/*
+node_modules/
+site/assets/
+site/modules/
+LICENSE
 !site/modules/TextformatterImageTags
 !site/modules/TextformatterVideoEmbed
 site/templates/node_modules/*
+site/templates/css/*
 wire/*
 *.jpg
 *.jpeg

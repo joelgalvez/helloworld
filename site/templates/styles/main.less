@@ -22,15 +22,15 @@ html {
 		font-size: 140%;
 	}
 	@media @medium {
-		font-size: 120%;		
+		font-size: 120%;
 	}
 	@media @small {
-		font-size: 100%;		
+		font-size: 100%;
 	}
 }
 
 body {
-	// font-size: 1.5rem;	
+	// font-size: 1.5rem;
 	line-height: 1.3;
 	overflow-y: scroll;
 }
@@ -95,7 +95,7 @@ img {
 			}
 		}
 	}
-} 
+}
 
 // .nav,
 .readmore,
@@ -128,7 +128,7 @@ img {
 
 .overviewtext,
 .body {
-	
+
 	blockquote,
 	h1,
 	h2,
@@ -201,8 +201,15 @@ img {
 				display: block;
 			}
 		}
+		.languages,
 		.expand {
 			float:right;
+		}
+		.languages {
+			margin: 0 1rem;
+			.language {
+				margin:0.25rem;
+			}
 		}
 		position: relative;
 		padding:@nav-margin;
@@ -213,7 +220,7 @@ img {
 			padding:@nav-margin;
 			padding-top: 0;
 			// top:@nav-margin;
-			
+
 			background-color: #fff;
 			width:100%;
 			.close {
@@ -243,7 +250,7 @@ img {
 			align-content: space-around;
 			justify-content: space-around;
 			flex-flow: row wrap;
-		
+
 			// margin-right:@main-margin;
 
 			figure {
@@ -265,8 +272,8 @@ img {
 			@media @medium-up {
 				padding-right:@grid-margin;
 
-				// margin-left: @grid-margin;		
-				width:33.333%;	
+				// margin-left: @grid-margin;
+				width:33.333%;
 			}
 			@media @small {
 				width:100%;
@@ -291,8 +298,8 @@ img {
 			white-space: nowrap;
 			overflow-x: scroll;
 			overflow-y: hidden;
-			
-		
+
+
 			a.item {
 				figure {
 					height: 100%;
@@ -310,7 +317,7 @@ img {
 				max-width: auto;
 				width: auto;
 			}
-			
+
 		}
 
 	}
@@ -325,7 +332,7 @@ img {
 			align-content: space-around;
 			justify-content: space-around;
 			flex-flow: row wrap;
-			
+
 			margin-right:@main-margin;
 
 			a.item {
@@ -380,18 +387,18 @@ img {
 			display: block;
 			text-align: center;
 			figure {
-				margin:0 auto;	
+				margin:0 auto;
 			}
 		}
 	}
 	.overview-list {
 		a.item {
-			
+
 		}
 	}
 	.tree {
 		ul {
-			user-select:none; 
+			user-select:none;
 			list-style: none;
 			padding-left: 1rem;
 			margin: 0.5rem auto;
@@ -417,7 +424,7 @@ img {
 			}
 			& ~ label {
 				cursor: pointer;
-				
+
 			}
 
 			// &:checked ~ label,
@@ -425,7 +432,7 @@ img {
 			// &:checked ~ .overviewtext {
 			// 	color:black;
 			// }
-		
+
 			//Expanded
 			& ~ label:before {
 				content: '-';
