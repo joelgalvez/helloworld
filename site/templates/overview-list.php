@@ -5,7 +5,7 @@
 	<div class="overview content <?=$page->template->name?>">
 		<?foreach($children as $c):?>
 			<p>
-				<a href="<?=$c->getUnformatted('body')!=''?$c->url:''?>" class="item"><?=$c->title?></a>
+				<a href="<?=$c->url?>" class="item"><?=$c->title?></a>
 			</p>
 		<?endforeach?>
 	</div>
