@@ -20,7 +20,13 @@
 
 			</div>
 			<?if($child->template->name=='article'):?>
-
+				<div class="center">		
+					<?if($child->readmore==''):?>
+						<a class="readmore" href="<?=$child->url?>"><?=$pages->get('/settings/readmore')->title?></a>
+					<?else:?>
+						<a class="readmore" href="<?=$child->url?>"><?=$child->readmore?></a>
+					<?endif?>
+				</div>
 			<?else:?>
 				<?=$child->render()?>
 			<?endif?>
