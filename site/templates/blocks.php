@@ -4,21 +4,24 @@
 			$child->contentonly = 1;
 		?>
 		<div class="block">
-			<div class="overviewtext content">
-				<?=$child->overviewtext?>
+			<div class="content">
+				<h1><?=$child->title?></h1>
+				<?if(count($child->images)>0):?>
+					<?
+						$thumb = $child->images->first()->width(2880, array('upscaling'=>false, 'cropping'=>false));
+					?>
+					<div class="image">
+						<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
+						<div class="caption"><?=$thumb->description?></div>
+					</div>
+				<?endif?>
+
+				<div class="overviewtext content"><?=$child->overviewtext?></div>
+
 			</div>
-			<?if($child->getUnformatted('body')):?>
-				<div class="readmore">
-					<a href="<?=$child->url?>"><?=$child->readmore?$child->readmore:'Read more'?></a>
-				</div>
-			<?endif?>
 			<?if($child->template->name=='article'):?>
-				<div class="page <?=$child->template->name?>">
-				</div>
+
 			<?else:?>
-				<?
-					$child->counter = $counter;
-				?>
 				<?=$child->render()?>
 			<?endif?>
 		</div>

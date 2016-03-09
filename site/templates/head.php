@@ -27,38 +27,8 @@
 					$header->contentonly=true;
 					echo $header->render();
 					echo '</header>';
-				}				
+				}
 			?>
-			<?/*?>
-			<?
-				$parents_or_self = new PageArray();
-				$parents_or_self->add($page->parents());
-				$parents_or_self->add($page);
-			?>
-			<div class="nav expand">
-				<?foreach($parents_or_self as $pos):?>
-					<h2>
-						<?foreach($pos->siblings() as $sibling):?>
-							<?if($sibling->inmenu):?>
-								<a class="nav-item <?=$sibling->id==$pos->id?'active':''?>" href="<?=$sibling->url?>"><?=$sibling->title?></a>
-							<?endif?>
-						<?endforeach?>
-					</h2>
-				<?endforeach?>
-				<?
-				$subs = $page->children();
-				?>
-				<?if(count($subs)>0):?>
-					<h2>
-						<?foreach($subs as $c):?>
-							<?if($c->inmenu):?>
-								<a class="nav-item" href="<?=$c->url?>"><?=$c->title?></a>
-							<?endif?>
-						<?endforeach?>
-					</h2>
-				<?endif?>
-			</div>
-			<?*/?>
 			<div class="nav">
 				<div class="visible">
 					<?if($pages->get('/')->inmenu):?>
@@ -69,6 +39,22 @@
 					<a class="expand" href="#expand">
 						<?=$pages->get('/settings/menu')->title?>
 					</a>
+					<?if(count($languages)>1):?>
+						<span class="languages">
+							<?
+								$savedLanguage = $user->language;
+							?>
+							<?foreach($languages as $l):?>
+								<?
+										$user->language  = $l;
+								?>
+								<a href="<?=$page->url?>" class="<?=$l->id==$savedLanguage->id?'active':''?> language"><?=$l->title?></a>
+							<?endforeach?>
+							<?
+								$user->language = $savedLanguage;
+							?>
+						</span>
+					<?endif?>
 				</div>
 				<ul class="expand-content">
 					<div class="close"><?=$pages->get('/settings/close')->title?></div>
@@ -80,8 +66,8 @@
 						    		$active = $page->id==$p->id?'active':'';
 						    		echo '<li><a class="'. $active .'" href="' . $p->url . '">' . $p->title . '</a>';
 						    	}
-					    		
-						    	
+
+
 						        if ($p->numChildren > 0) {
 						            echo '<ul>';
 						        }
@@ -102,10 +88,10 @@
 							$menu_footer->contentonly=true;
 							echo $menu_footer->body;
 							echo '</li>';
-						}				
+						}
 					?>
 
 				</ul>
 			</div>
-			
+
 <?endif?>

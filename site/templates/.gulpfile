@@ -1,0 +1,17 @@
+var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
+var less = require('gulp-less');
+
+gulp.task('default', function () {
+    return gulp.src('./styles/*.less')
+        .pipe(less({
+          // paths: [ path.join(__dirname, 'less', 'includes') ]
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
+
+        .pipe(gulp.dest('./css'));
+});
+
+var watcher = gulp.watch('./less/*.less', ['default']);
