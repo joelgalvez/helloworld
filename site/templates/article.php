@@ -11,13 +11,13 @@
 					$thumb = $page->images->first()->width(2880, array('upscaling'=>false, 'cropping'=>false));
 				?>
 				<div class="image">
-					<img src="<?=$thumb->url?>" alt="<?=$image->description?>">
-					<div class="caption"><?=$image->description?>
+					<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
+					<div class="caption"><?=$thumb->description?></div>
 				</div>
 			<?endif?>
-			<div class="overviewtext"><?=$page->overviewtext?></div>
-			<div class="body"><?=$page->body?></div>
 		</div>
+		<div class="overviewtext content"><?=$page->overviewtext?></div>
+		<div class="body content"><?=$page->body?></div>
 
 	</div>
 <?include('foot.php');?>

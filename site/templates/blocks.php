@@ -11,7 +11,7 @@
 						$thumb = $child->images->first()->width(2880, array('upscaling'=>false, 'cropping'=>false));
 					?>
 					<div class="image">
-						<img src="<?=$thumb->url?>" alt="<?=$image->description?>">
+						<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
 						<div class="caption"><?=$thumb->description?></div>
 					</div>
 				<?endif?>
