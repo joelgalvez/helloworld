@@ -19,3 +19,4 @@ site/config.php
 site/templates/admin.php
 *.woff
 site/templates/styles/vars.less
+*.css
