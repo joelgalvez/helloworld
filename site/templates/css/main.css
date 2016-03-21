@@ -203,7 +203,6 @@ img {
 .pagination ul li.MarkupPagerNavOn a {
   color: #f00;
 }
-.readmore,
 .content > blockquote,
 .content > h1,
 .content > h2,
@@ -212,6 +211,7 @@ img {
 .content > h5,
 .content > h6,
 .content > p,
+.content > .readmore,
 .content > ul {
   max-width: 39rem;
   margin: 0 auto;
@@ -223,8 +223,10 @@ img {
 .content > .image,
 .content > .video {
   text-align: center;
-  padding: 2rem 1rem;
-  margin: 0 auto;
+  margin: 1rem;
+}
+.center {
+  text-align: center;
 }
 .readmore {
   text-decoration: underline;
@@ -274,6 +276,9 @@ img {
   display: block;
   float: left;
 }
+a.item {
+  display: block;
+}
 .container {
   margin: 0 auto;
   max-width: 1000rem;
@@ -295,8 +300,15 @@ img {
 .container .nav.expanded .expand-content {
   display: block;
 }
+.container .nav .languages,
 .container .nav .expand {
   float: right;
+}
+.container .nav .languages {
+  margin: 0 1rem;
+}
+.container .nav .languages .language {
+  margin: 0.25rem;
 }
 .container .nav .expand-content {
   display: none;
@@ -312,6 +324,9 @@ img {
 }
 .container .block {
   margin-bottom: 3rem;
+}
+.container .block .item {
+  max-width: 1000rem;
 }
 .container .article.page {
   margin: 0 auto;
@@ -351,14 +366,16 @@ img {
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%;
 }
+.container .overview-same-size {
+  overflow: hidden;
+}
 @media all and (min-width: 901px) {
   .container .overview-same-size {
     padding-left: 1rem;
   }
 }
 .container .overview-same-size a.item {
-  display: inline-block;
-  vertical-align: top;
+  float: left;
   margin-bottom: 1rem;
 }
 @media all and (min-width: 901px) {
@@ -372,8 +389,7 @@ img {
     width: 100%;
   }
 }
-.container .overview-sidescroll a.item {
-  display: block;
+@media all and (max-width: 900px) {
 }
 @media all and (min-width: 901px) {
   .container .overview-sidescroll {
@@ -483,6 +499,8 @@ img {
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
   }
+}
+@media all and (max-width: 900px) {
 }
 .container .overview-blog a.item {
   max-width: 40rem;
