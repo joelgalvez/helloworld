@@ -1,5 +1,15 @@
 <?require './scss.inc.php';?>
-<?function icon($i, $width, $height, $upscaling=false, $cropping=false, $show_overviewtext=false) {?>
+<?function icon($i, $args) {?>
+	<?
+	$args += [
+			 $height => 600,
+			 $width => 800,
+			 $upscaling => false,
+			 $cropping => false,
+			 $showOverviewtext => false
+		 ];
+		 extract($args);
+	?>
 	<?
 		$has_content = $i->getUnformatted('body')!='';
 		if(!$i->template->hasField('body')) {
@@ -11,14 +21,14 @@
 			<?if(count($thumb = $i->images)>0):?>
 				<?
 					$thumb = $i->images->first()->size($width,$height,array('upscaling'=>$upscaling, 'cropping'=>$cropping));
-				?>				
+				?>
 				<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
 			<?endif?>
 			<figcaption>
 				<?if($i->title!='no-title'):?>
 					<?=$i->title?>
 				<?endif?>
-				<?if($show_overviewtext):?>
+				<?if($showOverviewtext):?>
 					<div class="overviewtext">
 						<?=$i->overviewtext?>
 					</div>
@@ -53,11 +63,11 @@
 	{
 	    foreach ($parent->children() as $child) {
 	        call_user_func($enter, $child, $currentPage);
-	        
+
 	        if ($child->numChildren > 0) {
 	            visit($child, $enter, $exit, $currentPage);
 	        }
-	        
+
 	        if ($exit) {
 	            call_user_func($exit, $child, $currentPage);
 	        }
