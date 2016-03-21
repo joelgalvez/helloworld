@@ -11,7 +11,7 @@
 					$size = 2;
 				}
 			?>
-			<?icon($c, $size*300, $size*300, false, false)?>
+			<?icon($c, ['width'=>$size*300,'height'=>$size*300, 'cropping'=>false,'upscaling'=>false,'showOverviewtext'=>false])?>
 		<?endforeach?>
 	</div>
 	<div class="pagination">

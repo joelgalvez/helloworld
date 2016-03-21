@@ -7,15 +7,17 @@
 	?>
 	<div class="<?=$page->template->name?>">
 		<?foreach($page->images as $image):?>
-			<figure>
-				<?
-					$thumb = $image->size(600,600,array('upscaling'=>false, 'cropping'=>false));
-				?>				
-				<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
-				<figcaption>
-					<?=$thumb->description?>
-				</figcaption>
-			</figure>
+			<a target="_blank" href="<?=$image->url?>"></a>
+				<figure>
+					<?
+						$thumb = $image->size(600,600,array('upscaling'=>false, 'cropping'=>false));
+					?>
+					<img src="<?=$thumb->url?>" alt="<?=$thumb->description?>">
+					<figcaption>
+						<?=$thumb->description?>
+					</figcaption>
+				</figure>
+			</a>
 		<?endforeach?>
 	</div>
 <?include('foot.php');?>

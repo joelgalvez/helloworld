@@ -8,7 +8,7 @@
 	?>
 	<div class="overview <?=$page->template->name?>">
 		<?foreach($children as $c):?>
-			<?icon($c, $size_per_image, $height, true, true, true)?>
+			<?icon($c, ['width'=>$size_per_image,'height'=>$height, 'cropping'=>true,'upscaling'=>true,'showOverviewtext'=>true])?>
 		<?endforeach?>
 	</div>
 	<div class="pagination">

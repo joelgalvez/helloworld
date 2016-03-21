@@ -106,6 +106,7 @@ img {
 .content >h5,
 .content >h6,
 .content >p,
+.content >.readmore,
 .content >ul {
 	max-width: @content-width;
 	margin:0 auto;
@@ -118,7 +119,7 @@ img {
 .content >.video {
 	text-align: center;
 	margin:@main-margin;
-	
+
 }
 
 .center {
@@ -173,6 +174,11 @@ img {
 	}
 
 }
+
+a.item {
+	display: block;
+}
+
 
 .container {
 	margin:0 auto;
@@ -232,6 +238,9 @@ img {
 		}
 	}
 	.block {
+		.item {
+			max-width: @container-width;
+		}
 		margin-bottom: @block-margin;
 	}
 
@@ -268,14 +277,12 @@ img {
 		@media @medium-up {
 			padding-left: @grid-margin;
 		}
+		overflow: hidden;
 		a.item {
-			display: inline-block;
-			vertical-align: top;
+			float:left;
 			margin-bottom: @grid-margin;
 			@media @medium-up {
 				padding-right:@grid-margin;
-
-				// margin-left: @grid-margin;
 				width:33.333%;
 			}
 			@media @small {
@@ -285,12 +292,8 @@ img {
 		@media @small {
 			// text-align: center;
 		}
-
 	}
 	.overview-sidescroll {
-		a.item {
-			display: block;
-		}
 		@media @medium-up {
 			// position: absolute;
 			height: 700px;
