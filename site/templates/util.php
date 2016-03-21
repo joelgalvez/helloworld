@@ -6,9 +6,10 @@
 			 $width => 800,
 			 $upscaling => false,
 			 $cropping => false,
-			 $showOverviewtext => false
+			 $show_overviewtext => false
 		 ];
 		 extract($args);
+		 $count=0;
 	?>
 	<?
 		$has_content = $i->getUnformatted('body')!='';
@@ -28,7 +29,7 @@
 				<?if($i->title!='no-title'):?>
 					<?=$i->title?>
 				<?endif?>
-				<?if($showOverviewtext):?>
+				<?if($show_overviewtext):?>
 					<div class="overviewtext">
 						<?=$i->overviewtext?>
 					</div>
@@ -46,6 +47,7 @@
 						continue;
 					}
 					$thumb_rest = $img->size($rest_width, $rest_height, array('upscaling'=>true, 'cropping'=>true));
+					$count++;
 				?>
 				<figure style="display:none">
 					<img src="<?=$thumb_rest->url?>" alt="<?=$thumb_rest->description?>">

@@ -121,7 +121,9 @@ img {
 	margin:@main-margin;
 
 }
-
+.readmore {
+	text-align: center;
+}
 .center {
 	text-align: center;
 }
@@ -242,6 +244,12 @@ a.item {
 			max-width: @container-width;
 		}
 		margin-bottom: @block-margin;
+		a[href]:hover {
+			h1,
+			.overviewtext {
+				text-decoration: none !important;
+			}
+		}
 	}
 
 	.article.page {

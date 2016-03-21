@@ -4,7 +4,7 @@
 	?>
 	<div class="overview <?=$page->template->name?>">
 		<?foreach($children as $c):?>
-			<?icon($c, ['width'=>1600, 'height'=>800,'showOverviewtext'=>true])?>
+			<?icon($c, ['width'=>1600, 'height'=>800,'show_overviewtext'=>true])?>
 		<?endforeach?>
 	</div>
 	<div class="pagination">

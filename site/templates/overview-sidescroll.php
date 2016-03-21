@@ -11,7 +11,7 @@
 					$size = 2;
 				}
 			?>
-			<?icon($c, ['width'=>1200,'height'=>1200, 'cropping'=>true,'upscaling'=>true,'showOverviewtext'=>false])?>
+			<?icon($c, ['width'=>1200,'height'=>1200, 'cropping'=>true,'upscaling'=>true,'show_overviewtext'=>false])?>
 		<?endforeach?>
 	</div>
 <?include('foot.php');?>
