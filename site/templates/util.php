@@ -10,6 +10,7 @@
 		 ];
 		 extract($args);
 		 $count=0;
+		 $total = count($i->images);
 	?>
 	<?
 		$has_content = $i->getUnformatted('body')!='';
@@ -27,12 +28,13 @@
 			<?endif?>
 			<figcaption>
 				<?if($i->title!='no-title'):?>
-					<?=$i->title?>
+					<?=$i->title?><!--
+				--><?endif?><!--
+				--><?if(!$has_content && $total>1):?><!--
+				-->, <span class="count">1 / <?=$total?></span>
 				<?endif?>
 				<?if($show_overviewtext):?>
-					<div class="overviewtext">
-						<?=$i->overviewtext?>
-					</div>
+				<?=$i->overviewtext?> <?=$thumb->description?>
 				<?endif?>
 			</figcaption>
 		</figure>
@@ -40,6 +42,7 @@
 			<?
 				$rest_width = $thumb->width;
 				$rest_height = $thumb->height;
+				$count=2;
 			?>
 			<?foreach($i->images as $img):?>
 				<?
@@ -47,14 +50,17 @@
 						continue;
 					}
 					$thumb_rest = $img->size($rest_width, $rest_height, array('upscaling'=>true, 'cropping'=>true));
-					$count++;
 				?>
 				<figure style="display:none">
 					<img src="<?=$thumb_rest->url?>" alt="<?=$thumb_rest->description?>">
 					<figcaption>
+						<?=$i->title?><span class="count">, <?=$count?> / <?=$total?></span>
 						<?=$thumb_rest->description?>
 					</figcaption>
 				</figure>
+				<?
+					$count++;
+				?>
 			<?endforeach?>
 		<?endif?>
 	</a>

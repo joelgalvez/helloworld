@@ -11,7 +11,7 @@
 						$href = "href=\"" . $child->url . "\"";
 					}
 				?>
-				<a <?=$href?> class="content">
+				<a <?=$href?> class="item content">
 					<h1><?=$child->title?></h1>
 					<div class="overviewtext content">
 						<?if(count($thumb = $child->images)>0):?>
