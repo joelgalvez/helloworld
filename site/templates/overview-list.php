@@ -21,4 +21,5 @@
 			</p>
 		<?endforeach?>
 	</div>
+</div>
 <?include('foot.php');?>

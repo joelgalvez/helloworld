@@ -107,6 +107,7 @@ img {
 .content >h5,
 .content >h6,
 .content >p,
+.caption >p,
 .content >.readmore,
 .content >ul {
 	max-width: @content-width;
@@ -243,6 +244,9 @@ a.item {
 	.block {
 		.item {
 			max-width: @container-width;
+		}
+		.article-block:hover {
+			text-decoration: none;
 		}
 		margin-bottom: @block-margin;
 	}
